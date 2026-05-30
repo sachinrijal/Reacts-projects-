@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  padding: 20px;
+}
+
+.board-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.box {
+  width: 140px;
+  height: 140px;
+  background: #111827;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 80px;
+  font-weight: 800;
+  color: #ffffff;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border: 2px solid transparent;
+}
+
+/* hover effect */
+.box:hover {
+  transform: translateY(-5px);
+  border-color: #60a5fa;
+  box-shadow: 0 15px 35px rgba(96, 165, 250, 0.3);
+}
+
+/* click effect */
+.box:active {
+  transform: scale(0.95);
+}
+
+.popup-overlay {
+position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.popup h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.popup button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
